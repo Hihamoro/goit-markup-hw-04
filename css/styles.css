@@ -7,6 +7,7 @@
     --filter-color: #F5F4FA;
     --main-background: #2F303A;
     --hero-background: #F5F4FA;
+    --icon-color: #AFB1B8;
 }
 
 body {
@@ -109,6 +110,7 @@ p {
 .contacts-flex {
     display: flex;
     margin-left: auto;
+    align-items: center;
 }
 
 .contacts-flex .item {
@@ -120,6 +122,9 @@ p {
 }
 
 .head-contacts {
+    display: flex;
+    align-items: center;
+    text-align: center;
     color: var(--title-text-color);
 }
 
@@ -128,12 +133,35 @@ p {
     color: var(--accent-color);
 }
 
+.icon-envelope {
+    padding-right: 10px;
+    fill: var(--title-text-color);
+}
+
+.icon-smartphone {
+    padding-right: 10px;
+    fill: var(--title-text-color);
+}
+
+.head-contacts:hover .icon-envelope,
+.head-contacts:focus .icon-envelope {
+    fill: var(--accent-color);
+}
+
+.head-contacts:hover .icon-smartphone,
+.head-contacts:focus .icon-smartphone {
+    fill: var(--accent-color);
+}
 
 /* main index */
 
 .cap {
     padding: 200px 252px 200px 252px;
-    background-color: var(--main-background);
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -167,6 +195,7 @@ p {
 .order-button:hover,
 .order-button:focus {
     color: var(--primary-text-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .secondary-name {
@@ -185,6 +214,15 @@ p {
 .features-flex .item {
     width: calc((100% - 30px * 3)/4);
     margin-right: 30px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: var(--hero-background);
 }
 
 .features-flex .item:last-child {
@@ -232,6 +270,8 @@ p {
     width: calc((100% - 30px * 3)/4);
     margin-right: 30px;
     background-color: var(--button-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .hero-flex .item:last-child {
@@ -249,12 +289,81 @@ p {
 }
 
 .position {
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-text-color);
+}
+
+.social-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.social-flex .item {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+    border-radius: 50%;
+}
+
+.social-flex .item:last-child {
+    margin-right: 0;
+}
+
+
+.social-flex .item:hover,
+.social-flex .item:focus {
+    background-color: var(--accent-color);
+}
+
+.social-flex .item:hover .icon,
+.social-flex .item:focus .icon {
+    fill: var(--button-color)
+}
+
+.social .icon {
+    display: flex;
+}
+
+.client-flex {
+    display: flex;
+}
+
+.client-flex .item {
+    display: flex;
+    height: 92px;
+    width: calc((100% - 30px * 5)/6);
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.client-flex .item:last-child {
+    margin-right: 0;
+}
+
+.client-flex .item:hover,
+.client-flex .item:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.client-flex .item:hover .icon,
+.client-flex .item:focus .icon {
+    fill: var(--accent-color)
+}
+
+.icon {
+    fill: var(--icon-color);
 }
 
 /* main portfolio */
@@ -284,21 +393,6 @@ p {
     margin-right: 0;
 }
 
-.main-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 90px;
-}
-
-.main-flex .item {
-    width: 380px;
-    margin-right: 30px;
-}
-
-.main-flex .item:nth-child(3n) {
-    margin-right: 0;
-}
-
 
 .filter-button {
     font-weight: 500;
@@ -317,6 +411,7 @@ p {
 .filter-button:focus {
     color: var(--button-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .main-button {
@@ -325,7 +420,32 @@ p {
     border: 1px solid transparent;
 }
 
+.main-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-flex .item {
+    width: calc((100% - 6px - 30px * 2)/3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background: var(--button-color);
+    border: 1px solid #EEEEEE;
+}
+
+.main-flex .item:hover,
+.main-flex .item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.main-flex .item:nth-child(3n) {
+    margin-right: 0;
+}
+
 .project-name {
+    padding-top: 20px;
+    padding-bottom: 4px;
+    padding-left: 24px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -334,6 +454,8 @@ p {
 }
 
 .project-type {
+    padding-bottom: 20px;
+    padding-left: 24px;
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
@@ -344,21 +466,31 @@ p {
 
 .bottom {
     width: 1200px;
-    padding-top: 60px;
-    padding-bottom: 60px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     background-color: var(--main-background);
 }
 
+.bottom .container {
+    width: auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
 .logo-foot {
     color: var(--button-color);
 }
 
+.foot-flex {
+    display: flex;
+    align-items: center;
+}
+
 .footer-contacts {
-    padding-top: 20px;
     font-style: normal;
+    margin-top: 20px;
+    padding-right: 70px;
 }
 
 .location {
@@ -387,4 +519,53 @@ p {
 .foot-phone:hover,
 .foot-phone:focus {
     color: var(--accent-color);
+}
+
+.footer-section {
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.footer-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--button-color);
+}
+
+.foot-social {
+    display: flex;
+    justify-content: center;
+}
+
+.foot-social .item {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin-top: 20px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.foot-social .item:last-child {
+    margin-right: 0;
+}
+
+.foot-social .item:hover,
+.foot-social .item:focus {
+    background-color: var(--accent-color);
+}
+
+.foot-social .item:hover .icon,
+.foot-social .item:focus .icon {
+    fill: var(--button-color)
+}
+
+.social .icon {
+    display: flex;
 }
