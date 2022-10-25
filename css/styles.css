@@ -14,6 +14,7 @@ body {
     font-family: "Roboto", sans-serif;
     background: #FFFFFF;
     color: var(--primary-text-color);
+    margin: 0;
 }
 
 .list {
@@ -33,7 +34,10 @@ p {
 }
 
 .container {
-    Width: 1200px;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
 }
 
 .section {
@@ -45,7 +49,6 @@ p {
 /* header */
 
 .top {
-    width: 1200px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -57,7 +60,6 @@ p {
 .div-flex {
     display: flex;
     align-items: center;
-    margin-right: 0;
 }
 
 .logo-beginning {
@@ -81,12 +83,12 @@ p {
 
 .head-flex {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .head-flex .item {
     margin-right: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .head-flex .item:last-child {
@@ -157,15 +159,19 @@ p {
 
 .cap {
     padding: 200px 252px 200px 252px;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, center;
     align-items: center;
     text-align: center;
 }
 
 .main-name {
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -194,8 +200,7 @@ p {
 
 .order-button:hover,
 .order-button:focus {
-    color: var(--primary-text-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: #188CE8;
 }
 
 .secondary-name {
@@ -209,6 +214,10 @@ p {
 
 .features-flex {
     display: flex;
+}
+
+.features-section {
+    padding-bottom: 0;
 }
 
 .features-flex .item {
@@ -289,7 +298,7 @@ p {
 }
 
 .position {
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
@@ -321,6 +330,7 @@ p {
 
 .social-flex .item:hover,
 .social-flex .item:focus {
+    cursor: pointer;
     background-color: var(--accent-color);
 }
 
@@ -354,6 +364,7 @@ p {
 
 .client-flex .item:hover,
 .client-flex .item:focus {
+    cursor: pointer;
     border: 1px solid var(--accent-color);
 }
 
@@ -442,6 +453,18 @@ p {
     margin-right: 0;
 }
 
+.main-flex .item:nth-child(7n) {
+    margin-bottom: 0;
+}
+
+.main-flex .item:nth-child(8n) {
+    margin-bottom: 0;
+}
+
+.main-flex .item:nth-child(9n) {
+    margin-bottom: 0;
+}
+
 .project-name {
     padding-top: 20px;
     padding-bottom: 4px;
@@ -465,17 +488,10 @@ p {
 /* footer */
 
 .bottom {
-    width: 1200px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     background-color: var(--main-background);
-}
-
-.bottom .container {
-    width: auto;
-    padding-bottom: 60px;
-    padding-top: 60px;
 }
 
 .logo-foot {
@@ -485,6 +501,14 @@ p {
 .foot-flex {
     display: flex;
     align-items: center;
+}
+
+.footer-list .item {
+    margin-bottom: 9px;
+}
+
+.footer-list .item:last-child {
+    margin-bottom: 0px;
 }
 
 .footer-contacts {
@@ -558,6 +582,7 @@ p {
 
 .foot-social .item:hover,
 .foot-social .item:focus {
+    cursor: pointer;
     background-color: var(--accent-color);
 }
 
