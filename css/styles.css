@@ -14,13 +14,16 @@ body {
     font-family: "Roboto", sans-serif;
     background: #FFFFFF;
     color: var(--primary-text-color);
-    margin: 0;
 }
 
 .list {
     list-style: none;
     margin: 0;
     padding-left: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1,
@@ -158,7 +161,8 @@ p {
 /* main index */
 
 .cap {
-    padding: 200px 252px 200px 252px;
+    margin: auto;
+    padding: 200px 0px 200px 0px;
     max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background.jpg);
     background-repeat: no-repeat, no-repeat;
@@ -321,6 +325,7 @@ p {
     align-items: center;
     background-color: var(--button-color);
     border-radius: 50%;
+    box-shadow: none;
 }
 
 .social-flex .item:last-child {
@@ -571,6 +576,7 @@ p {
     margin-top: 20px;
     margin-right: 10px;
     justify-content: center;
+    fill: var(--button-color);
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -586,11 +592,25 @@ p {
     background-color: var(--accent-color);
 }
 
-.foot-social .item:hover .icon,
-.foot-social .item:focus .icon {
+.foot-social .item .icon {
     fill: var(--button-color)
 }
 
 .social .icon {
     display: flex;
+}
+
+/* приховано */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
